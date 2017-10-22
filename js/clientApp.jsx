@@ -1,37 +1,14 @@
 import React from "react";
 import { render } from "react-dom";
+import { HashRouter, Route } from "react-router-dom";
+import Landing from "./Landing";
 
-const ce = React.createElement;
-
-const MyTitle = function(props) {
-  const style = { color: props.color };
-  return (
-    <div>
-      <h1 style={style}>{props.title}</h1>
+const App = () => (
+  <HashRouter>
+    <div className="app">
+      <Route exact path="/" component={Landing} />
     </div>
-  );
-};
+  </HashRouter>
+);
 
-// class MyTitle {
-//   render() {
-//     const color = {props.color}
-//     return (
-//       <div>
-//         <h1 style={}>{props.title}</h1>
-//       </div>
-//     );
-//   }
-// }
-
-const MyFirstComponent = function() {
-  return (
-    <div id="my-first-component">
-      <MyTitle title="Carn Life" color="Peru" />
-      <MyTitle title="Carn Life" color="blue" />
-      <MyTitle title="Carn Life" color="green" />
-      <MyTitle title="Carn Life" color="orange" />
-    </div>
-  );
-};
-
-render(React.createElement(MyFirstComponent), document.getElementById("app"));
+render(<App />, document.getElementById("app"));
