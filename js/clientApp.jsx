@@ -11,7 +11,7 @@ const MyTitle = function(props) {
   );
 };
 
-const MyFirstComponent = function trap() {
+const MyFirstComponent = function() {
   return ce(
     "div",
     null,
@@ -22,7 +22,4 @@ const MyFirstComponent = function trap() {
   );
 };
 
-ReactDOM.render(
-  React.createElement(MyFirstComponent),
-  document.getElementById("app"),
-);
+render(React.createElement(MyFirstComponent), document.getElementById("app"));
