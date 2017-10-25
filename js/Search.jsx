@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import preload from "../data.json";
 import ShowCard from "./ShowCard";
 
 class Search extends Component {
