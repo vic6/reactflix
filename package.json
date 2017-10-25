@@ -10,7 +10,8 @@
     "lint": "eslint **/*.{js,jsx} --quiet",
     "watch": "webpack --watch",
     "test": "jest",
-    "test:update": "jest -u"
+    "test:update": "jest -u",
+    "test:coverage": "jest --coverage"
   },
   "jest": {
     "snapshotSerializers": ["jest-serializer-enzyme"]
