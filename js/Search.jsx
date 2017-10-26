@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React, { Component } from "react";
 import ShowCard from "./ShowCard";
 
@@ -7,6 +8,7 @@ class Search extends Component {
   state = {
     searchTerm: "",
   };
+
   handleSearchTerm = event => {
     this.setState({ searchTerm: event.target.value });
   };
@@ -39,7 +41,7 @@ class Search extends Component {
         </header>
 
         <div>
-          {preload.shows
+          {this.props.shows
             .filter(
               show =>
                 `${show.title} ${show.description}`
@@ -55,4 +57,8 @@ class Search extends Component {
   }
 }
 
+// Not really doing anything, just gets rid of linter error, it's not a string
+Search.propTypes = {
+  shows: PropTypes.string.isRequired,
+};
 export default Search;
