@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import ShowCard from "./ShowCard";
+import Header from "./Header";
 
 class Search extends Component {
   // Public class field, this is a stage 2 proposal, include in babelrc
@@ -30,16 +31,11 @@ class Search extends Component {
   render() {
     return (
       <div className="search">
-        <header>
-          <h1>VicsFlix</h1>
-          <input
-            onChange={this.handleSearchTerm}
-            value={this.state.searchTerm}
-            type="text"
-            placeholder="Search"
-          />
-        </header>
-
+        <Header
+          searchTerm={this.state.searchTerm}
+          showSearch
+          handleSearchTerm={this.handleSearchTerm}
+        />
         <div>
           {this.props.shows
             .filter(
