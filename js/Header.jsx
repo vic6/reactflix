@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { shape } from "prop-types";
 
 const Header = props => {
   let utilSpace;
@@ -29,7 +30,14 @@ const Header = props => {
   );
 };
 
+Header.propTypes = {
+  handleSearchTerm: shape.isRequired,
+  showSearch: shape.isRequired,
+  searchTerm: shape.isRequired,
+};
+
 Header.defaultProps = {
   showSearch: false,
 };
+
 export default Header;

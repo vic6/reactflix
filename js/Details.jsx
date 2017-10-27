@@ -1,4 +1,5 @@
 import React from "react";
+import { shape } from "prop-types";
 import Header from "./Header";
 
 const Details = props => {
@@ -25,6 +26,10 @@ const Details = props => {
       </div>
     </div>
   );
+};
+
+Details.propTypes = {
+  show: shape.isRequired,
 };
 
 export default Details;
