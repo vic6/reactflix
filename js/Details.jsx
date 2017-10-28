@@ -39,9 +39,12 @@ class Details extends Component {
         </section>
         <div>
           <iframe
+            style={{
+              width: "75%",
+              height: "75%",
+            }}
             src={`https://www.youtube-nocookie.com/embed/${trailer}?rel=0&amp;showinfo=0`}
             frameBorder="0"
-            allowFullScreen
             title={`Trailer for ${title}`}
           />
         </div>
